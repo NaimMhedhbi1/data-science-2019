@@ -1,0 +1,10 @@
+Feature Importance for Random Forest Model 07-12-2019 
+feature_labels = np.array(['satisfaction_level', 'last_evaluation', 'time_spend_company', 'Work_accident', 'promotion_last_5years', 
+      'department_RandD', 'department_hr', 'department_management', 'salary_high', 'salary_low'])
+importance = rf.feature_importances_
+feature_indexes_by_importance = importance.argsort()
+for index in feature_indexes_by_importance:
+    print('{}-{:.2f}%'.format(feature_labels[index], (importance[index] *100.0)))
+   
+   conclusion : According to our Random Forest model, the above shows the most important features which influence whether 
+   an employee will leave the company, in ascending order.
