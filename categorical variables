@@ -5,3 +5,9 @@ for var in cat_vars:
     cat_list = pd.get_dummies(hr[var], prefix=var)
     hr1=hr.join(cat_list)
     hr=hr1
+hr.drop(hr.columns[[8, 9]], axis=1, inplace=True)
+hr.columns.values
+The outcome variable is “left”, and all the other variables are predictors.
+hr_vars=hr.columns.values.tolist()
+y=['left']
+X=[i for i in hr_vars if i not in y]
