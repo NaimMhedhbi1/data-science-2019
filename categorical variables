@@ -1,0 +1,7 @@
+Creating Dummy Variables for Categorical Variables
+cat_vars=['department','salary']
+for var in cat_vars:
+    cat_list='var'+'_'+var
+    cat_list = pd.get_dummies(hr[var], prefix=var)
+    hr1=hr.join(cat_list)
+    hr=hr1
