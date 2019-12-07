@@ -1,0 +1,13 @@
+The Recursive Feature Elimination (RFE) works by recursively removing variables and building a model on those variables that remain. It uses the model accuracy to identify which variables (and combination of variables) contribute the most to predicting the target attribute.
+Let’s use feature selection to help us decide which variables are significant that can predict employee turnover with great accuracy. There are total 18 columns in X, how about select 10?
+from sklearn.feature_selection import RFE
+from sklearn.linear_model import LogisticRegression
+model = LogisticRegression()
+rfe = RFE(model, 10)
+rfe = rfe.fit(hr[X], hr[y])
+print(rfe.support_)
+print(rfe.ranking_)
+cols=['satisfaction_level', 'last_evaluation', 'time_spend_company', 'Work_accident', 'promotion_last_5years', 
+      'department_RandD', 'department_hr', 'department_management', 'salary_high', 'salary_low'] 
+X=hr[cols]
+y=hr['left']
