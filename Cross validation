@@ -1,0 +1,12 @@
+07-12-2019 
+Cross Validation
+Cross validation attempts to avoid overfitting while still producing a prediction for each observation dataset. We are using 10-fold Cross-Validation to train our Random Forest model.
+from sklearn import model_selection
+from sklearn.model_selection import cross_val_score
+kfold = model_selection.KFold(n_splits=10, random_state=7)
+modelCV = RandomForestClassifier()
+scoring = 'accuracy'
+results = model_selection.cross_val_score(modelCV, X_train, y_train, cv=kfold, scoring=scoring)
+print("10-fold cross validation average accuracy: %.3f" % (results.mean()))
+10-fold cross validation average accuracy: 0.977
+The average accuracy remains very close to the Random Forest model accuracy; hence, we can conclude that the model generalizes well.
