@@ -1,0 +1,28 @@
+from sklearn.preprocessing import LabelEncoder, OneHotEncoder
+# Create a label encoder object
+le = LabelEncoder() 
+# Label Encoding will be used for columns with 2 or less unique values
+le_count = 0
+for col in df_HR.columns[1:]:
+    if df_HR[col].dtype == 'object':
+        if len(list(df_HR[col].unique())) <= 2:
+            le.fit(df_HR[col])
+            df_HR[col] = le.transform(df_HR[col])
+            le_count += 1
+print('{} columns were label encoded.'.format(le_count))
+# convert rest of categorical variable into dummy
+df_HR = pd.get_dummies(df_HR, drop_first=True)
+
+
+
+feature scaling 
+# import MinMaxScaler
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler(feature_range=(0, 5))
+HR_col = list(df_HR.columns)
+HR_col.remove('Attrition')
+for col in HR_col:
+    df_HR[col] = df_HR[col].astype(float)
+    df_HR[[col]] = scaler.fit_transform(df_HR[[col]])
+df_HR['Attrition'] = pd.to_numeric(df_HR['Attrition'], downcast='float')
+df_HR.head()
