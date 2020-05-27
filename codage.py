@@ -13,7 +13,7 @@ from collections import namedtuple
 
 import warnings
 warnings.filterwarnings('ignore')
-survey_data = pd.read_excel('C:/Users/user/Documents/projets 121 total/CJD/CJD_500 2019.xlsx' , sep=';', error_bad_lines=False, index_col=False, dtype='unicode' , encoding = 'UTF-8' )
+survey_data = pd.read_excel('CJD.xlsx' , sep=';', error_bad_lines=False, index_col=False, dtype='unicode' , encoding = 'UTF-8' )
 ccc = pd.read_excel('C:/Users/user/.spyder-py3/CJD/ccc1.xlsx' , sep=';', error_bad_lines=False, index_col=False, dtype='unicode' , encoding = 'UTF-8' )
 #ccc = ccc.drop_duplicates(['Q8Other1', 'Q8Other2','Q8Other3', 'Q8Other4'])
 
@@ -145,6 +145,6 @@ Q8_other_cd.to_excel('C:/Users/user/.spyder-py3/CJD/Q8_other_cd.xlsx') """
     .set_axis([ 'Unique_Values'], axis=1, inplace=False
     """
 #comments : #########
-#df = pd.read_csv("C:/Users/user/.spyder-py3/pg30_marroc/pg_maroc_814.csv", sep=';', error_bad_lines=False, index_col=False, dtype='unicode' , encoding = 'UTF-8')
+#df = pd.read_csv("C:/Users/user/.spyder-py3/pg30_marroc/pg.csv", sep=';', error_bad_lines=False, index_col=False, dtype='unicode' , encoding = 'UTF-8')
 #Q8_other_c = (survey_data['Q8Other1'].append( survey_data['Q8Other2'])).unique()
 #Q8_other_c = pd.DataFrame(Q8_other_c)     #############
