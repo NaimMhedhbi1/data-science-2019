@@ -13,11 +13,11 @@ from collections import namedtuple
 
 import warnings
 warnings.filterwarnings('ignore')
-cjd = pd.read_csv('C:/Users/user/Documents/projets 121 total/CJD/CJD_categ.csv',sep=';', error_bad_lines=False, index_col=False, dtype='unicode' , encoding = 'UTF-8')
+cjd = pd.read_csv('CJD_categ.csv',sep=';', error_bad_lines=False, index_col=False, dtype='unicode' , encoding = 'UTF-8')
 df1 = cjd.melt()
 pd.crosstab(index=df1['value'], columns=df1['variable'])
 freq_all_cjd = cjd.apply(pd.value_counts)
-freq_all_cjd.to_excel('C:/Users/user/.spyder-py3/CJD/cjd_analyse/freq_all_cjd.xlsx') 
+freq_all_cjd.to_excel('C:/Users/user/.spyder-py3/analyse/freq_all.xlsx') 
 
 
 cjd_var = []
