@@ -68,52 +68,6 @@ frames = [ccc,dfDiff,df1]
 result = pd.concat(frames, axis = 1 )  
 result.to_excel('C:/Users/user/.spyder-py3/CJD/result.xlsx', index = True)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 """new = df.columns.tolist()
 length = len(new)
 
