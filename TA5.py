@@ -11,7 +11,7 @@ import datetime as dt
 import warnings
 warnings.filterwarnings('ignore')
 
-df = pd.read_csv("C:/Users/user/.spyder-py3/TA5.csv", sep=';', error_bad_lines=False, index_col=False, dtype='unicode')
+df = pd.read_csv("C:/Users/user/.spyder-py3/TA.csv", sep=';', error_bad_lines=False, index_col=False, dtype='unicode')
 #mydateparser = lambda x: pd.datetime.strptime(x, "%m/%d/%y")
 #df = pd.read_csv("C:/Users/user/.spyder-py3/TA5.csv", sep=';', error_bad_lines=False, index_col=False, dtype='unicode', parse_dates=['START_TIME'],
 #date_parser=mydateparser)
