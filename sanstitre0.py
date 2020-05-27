@@ -2,7 +2,7 @@
 import pandas as pd 
 import numpy as np 
 
-df = pd.read_excel('C:/Users/user/Documents/projets 121 total/AI Mauritanie/AI_M_auritanie_27_01.xlsx')
+df = pd.read_excel('27_01.xlsx')
 
 
 p_match = df.loc[df['QID'].isin(['975','927','1415','1408','1032','1031','971','972','1040','1039','928','979','976','975','980'])]
