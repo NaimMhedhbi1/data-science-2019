@@ -18,7 +18,7 @@ ccc = pd.read_excel('ccc1.xlsx' , sep=';', error_bad_lines=False, index_col=Fals
 #ccc = ccc.drop_duplicates(['Q8Other1', 'Q8Other2','Q8Other3', 'Q8Other4'])
 
 
-df = pd.read_excel('C:/Users/user/.spyder-py3/CJD/ccc1.xlsx' , sep=';', error_bad_lines=False, index_col=False, dtype='unicode' , encoding = 'UTF-8' )
+df = pd.read_excel('ccc1.xlsx' , sep=';', error_bad_lines=False, index_col=False, dtype='unicode' , encoding = 'UTF-8' )
 
 def get_coded_values(x) :
     colN = x.columns.values
