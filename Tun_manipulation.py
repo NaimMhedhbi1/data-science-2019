@@ -11,7 +11,7 @@ import datetime as dt
 import warnings
 warnings.filterwarnings('ignore')
 
-df = pd.read_csv("C:/Users/user/.spyder-py3/pg_tun_803.csv", sep=';', error_bad_lines=False, index_col=False, dtype='unicode' , encoding = 'UTF-8')
+df = pd.read_csv("tun_803.csv", sep=';', error_bad_lines=False, index_col=False, dtype='unicode' , encoding = 'UTF-8')
 
 df['END_TIME']= pd.to_datetime(df['END_TIME'] , errors = 'coerce')
 df['START_TIME']= pd.to_datetime(df['START_TIME'], errors = 'coerce')
@@ -56,13 +56,13 @@ dDF2_info = pd.DataFrame.from_items([('occur', occur), ('duplicate_counts_1',dup
         
 
 
-frd.to_excel('C:/Users/user/.spyder-py3/pg30_tunisie/frd.xlsx') 
-duplicateRowsDF1_info.to_excel('C:/Users/user/.spyder-py3/pg30_tunisie/duplicateRowsDF1_info.xlsx')
+frd.to_excel('frd.xlsx') 
+duplicateRowsDF1_info.to_excel('duplicateRowsDF1_info.xlsx')
 frd_info.to_excel('C:/Users/user/.spyder-py3/pg30_tunisie/frd_info.xlsx')
-frd_before_7_am_info.to_excel('C:/Users/user/.spyder-py3/pg30_tunisie/frd_before_7_am_info.xlsx')
-frd_after_9pm_info.to_excel('C:/Users/user/.spyder-py3/pg30_tunisie/frd_after_9pm_info.xlsx')
-duplicate_counts.to_excel('C:/Users/user/.spyder-py3/pg30_tunisie/duplicate_counts.xlsx', index = True)
-dDF2_info.to_excel('C:/Users/user/.spyder-py3/pg30_tunisie/dDF2_info.xlsx', index = True)
+frd_before_7_am_info.to_excel('frd_before_7_am_info.xlsx')
+frd_after_9pm_info.to_excel('frd_after_9pm_info.xlsx')
+duplicate_counts.to_excel('duplicate_counts.xlsx', index = True)
+dDF2_info.to_excel('dDF2_info.xlsx', index = True)
 def check_date_by_id(df):
 
     df['prevFrom'] = df['START_TIME'].shift()
