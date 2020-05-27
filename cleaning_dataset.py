@@ -1,7 +1,7 @@
 import pandas as pd 
 import numpy as np 
 
-df = pd.read_excel('C:/Users/Naim/Documents/projets 121 total/AM project/Etude AM 20-05-2020.xlsx') 
+df = pd.read_excel('AM 20-05-2020.xlsx') 
 """
 value_counts = df.apply(pd.value_counts)
 
