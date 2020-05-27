@@ -1,7 +1,7 @@
 import numpy as np 
 import pandas as pd 
 
-df = pd.read_excel('file:///C:/Users/user/Documents/projets 121 total/RE/RE 16_01.xlsx')
+df = pd.read_excel('file.xlsx')
 
 
 #df['duration11']= pd.to_datetime(df.duration_1, format='%H%M').dt.time
