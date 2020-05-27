@@ -1,7 +1,7 @@
 import pandas as pd 
 import numpy as np 
 
-df = pd.read_excel('C:/Users/Naim/Documents/projets 121 total/AM project/taux_refus.xlsx')
+df = pd.read_excel('taux_refus.xlsx')
 
 "calculate the missing values in each row "
 for i in range(len(df.index)) :
