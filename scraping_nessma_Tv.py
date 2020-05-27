@@ -7,8 +7,8 @@ try:
 except ImportError:
     from urllib2 import urlopen, Request
 
-app_id = "<145282886794640>"
-app_secret = "<7cc260766b0b2cbeb93241caf048d980>"  # DO NOT SHARE WITH ANYONE!
+app_id = ""
+app_secret = ""  # DO NOT SHARE WITH ANYONE!
 page_id = "nessma.tv"
 
 # input date formatted as YYYY-MM-DD
@@ -16,7 +16,7 @@ since_date = "2020-03-01"
 until_date = "2020-04-07"
 
 #access_token = app_id + "|" + app_secret
-access_token = "EAAFlZCBhaIdIBAMX3xihCpVYqMSCNsybz0JZCZAtF3LwhOZB8vv9FZAYQkjnFM9w4nLOrwKrN6qYiQkZAz5GBcmHbNmqFwpqwSM0athcrF3ZBoQUD3IEbiWEfc4ebA3sYfgt6HJLcHa7i7WZCI8MHcDVY1Gwdslm91jikdazZAz8YZCnv8nOPBwAEfgtvUw05rXSMZD"
+access_token = ""
 
 def request_until_succeed(url):
     req = Request(url)
